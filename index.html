@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoVault Wallet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2 class="logo">CryptoVault</h2>
+    <ul>
+        <li class="active" onclick="openTab('dashboard')">📊 Главная</li>
+        <li onclick="openTab('tokens')">💎 Токены</li>
+        <li onclick="openTab('history')">🕘 История</li>
+        <li onclick="openTab('settings')">⚙ Настройки</li>
+    </ul>
+</div>
+
+<div class="main">
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="tab active">
+        <h1>Баланс</h1>
+        <div class="balance">$7,560.00</div>
+
+        <div class="actions">
+            <button onclick="showPopup('send')"> Отправить</button>
+            <button onclick="showPopup('receive')"> Получить</button>
+        </div>
+
+        <canvas id="chart"></canvas>
+    </div>
+
+    <!-- TOKENS -->
+    <div id="tokens" class="tab">
+        <h1>Ваши токены</h1>
+        <div class="token">
+            <span>Bitcoin (BTC)</span>
+            <span>0.15 BTC</span>
+        </div>
+        <div class="token">
+            <span>Ethereum (ETH)</span>
+            <span>1.8 ETH</span>
+        </div>
+        <div class="token">
+            <span>USDT</span>
+            <span>$3200</span>
+        </div>
+    </div>
+
+    <!-- HISTORY -->
+    <div id="history" class="tab">
+        <h1>История транзакций</h1>
+
+        <div class="history-item">
+            <span>Отправлено</span>
+            <span>- $200</span>
+        </div>
+
+        <div class="history-item">
+            <span>Получено</span>
+            <span>+ $450</span>
+        </div>
+
+        <div class="history-item">
+            <span>Комиссия</span>
+            <span>- $4</span>
+        </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="settings" class="tab">
+        <h1>Настройки</h1>
+        <p>Адрес кошелька:</p>
+        <code>0xA3B9c2d17eF02a91234fF87B12fEabC1dE001234</code>
+        <p style="margin-top:20px;">Тема:</p>
+        <button onclick="toggleTheme()">Переключить тему</button>
+    </div>
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2 id="popup-title"></h2>
+        <input type="text" placeholder="Адрес кошелька">
+        <input type="number" placeholder="Сумма">
+        <button onclick="closePopup()">Готово</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
